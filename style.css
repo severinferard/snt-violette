@@ -1,0 +1,149 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#main-container {
+    width: 1200px;
+    height: 100%;
+}
+
+header {
+    border-bottom: 1px solid #DDD;
+    padding: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link-card {
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
+    font-size: 1.2em;
+}
+
+.link-card-selected {
+    border-bottom: 3px solid #000;
+}
+
+.link-card:hover {
+    color: #197BBD;
+}
+
+nav > a {
+    text-decoration: none;
+}
+
+#intro {
+    margin-top: 100px;
+    margin-bottom: 60px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#intro-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+#intro-text {
+    margin-top: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+#map {
+    height: 500px;
+    width: 80%;
+    margin: auto;
+}
+
+#map-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.spacer {
+    height: 100px;
+}
+
+.establishment-container {
+    /* background-color: red; */
+    height: 100%;
+    flex-basis: 70%;
+}
+
+.establishment-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.reviews-container {
+    /* background-color: green; */
+    font-family: 'Quicksand', sans-serif;
+    height: 100%;
+    flex-basis: 50%;
+    overflow-y: scroll;
+    border-left: 1px solid #000;
+    padding-left: 10px;
+}
+
+.review-header  {
+    display: flex;
+    justify-content: space-between;
+}
+
+.review-name {
+    font-weight: 600;
+}
+
+.review-date {
+    font-weight: 600;
+}
+
+.reviews-container .spacer {
+    width: 80%;
+    height: 0;
+    border-bottom: 1px solid #000;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+
+.review-stars {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+.checked {
+    color: orange;
+  }
+
+.reviews-container .fa-star {
+    font-size: 30px;
+}
+
+.presentation {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}

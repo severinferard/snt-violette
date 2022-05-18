@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pause dej'</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-container">
+      <header>
+        <a href="./index.html"><img src="./assets/logo.png" alt="Pause dej'" /></a>
+      </header>
+      <nav>
+        <a href="la-pizza-du-dimanche-soir.html"><div class="link-card">La Pizza du Dimanche soir</div></a>
+        <a href="#"><div class="link-card">Le Ptit Simply</div></a>
+        <a href="#"><div class="link-card">Le Grand Simply</div></a>
+        <a href="#"><div class="link-card">Le jap'</div></a>
+        <a href="#"><div class="link-card">Le Grec</div></a>
+        <a href="#"><div class="link-card">Pizza Break</div></a>
+        <a href="#"><div class="link-card">La cantoche</div></a>
+      </nav>
+      <div id="intro">
+        <div id="intro-title"><i>Pause dej c’est quoi ?</i></div>
+        <div id="intro-text">
+          Vous en avez marre de chercher un coin pour manger pendant des heures a Verneuil ? Vous n’avez que 50 minutes pour manger et vous voulez un endroit sympa pour décompresser ? Pause dej est LA
+          solution ! Grâce à ca map de Verneuil est ses avis, notre site vous offre la facilité de choisir un lieu pour manger selon votre budget, votre temps et vos envies. Arrêtez de chercher,
+          pause dej' est arrivé !
+        </div>
+      </div>
+      <div id="map-text"><strong>Sélectionnez un établissement sur la carte !</strong></div>
+      <div id="map"></div>
+      <div class="spacer"></div>
+    </div>
+  </body>
+  <script>
+    var map = L.map("map").setView([48.982502, 1.973662], 12);
+    var osmLayer = L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
+      attribution: "© OpenStreetMap contributors",
+      maxZoom: 19,
+    });
+    map.addLayer(osmLayer);
+    map.flyTo([48.982502, 1.973662], 14, {
+      animate: true,
+      duration: .6,
+    });
+
+    L.marker([48.980872, 1.974287])
+      .addTo(map)
+      .bindPopup("Le ptit Simply")
+      .on("mouseover", function (e) {
+        this.openPopup();
+      })
+      .on("mouseout", function (e) {
+        this.closePopup();
+      });
+
+      L.marker([48.980904, 1.974504])
+      .addTo(map)
+      .bindPopup("Le jap'")
+      .on("mouseover", function (e) {
+        this.openPopup();
+      })
+      .on("mouseout", function (e) {
+        this.closePopup();
+      });
+
+      L.marker([48.980881, 1.974556])
+      .addTo(map)
+      .bindPopup("Le Grec")
+      .on("mouseover", function (e) {
+        this.openPopup();
+      })
+      .on("mouseout", function (e) {
+        this.closePopup();
+      });
+
+      L.marker([48.986047, 1.969315])
+      .addTo(map)
+      .bindPopup("Le Grand Simply")
+      .on("mouseover", function (e) {
+        this.openPopup();
+      })
+      .on("mouseout", function (e) {
+        this.closePopup();
+      });
+
+      L.marker([48.982377, 1.969918])
+      .addTo(map)
+      .bindPopup("Pizza Break")
+      .on("mouseover", function (e) {
+        this.openPopup();
+      })
+      .on("mouseout", function (e) {
+        this.closePopup();
+      });
+
+      L.marker([48.98351 ,1.973754])
+      .addTo(map)
+      .bindPopup("La cantoche")
+      .on("mouseover", function (e) {
+        this.openPopup();
+      })
+      .on("mouseout", function (e) {
+        this.closePopup();
+      });
+
+      L.marker([48.980787571953 ,1.9743795512476936])
+      .addTo(map)
+      .bindPopup("La Pizza du Dimanche Soir")
+      .on("mouseover", function (e) {
+        this.openPopup();
+      })
+      .on("mouseout", function (e) {
+        this.closePopup();
+      });
+
+    
+  </script>
+</html>
