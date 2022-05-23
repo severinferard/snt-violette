@@ -113,6 +113,7 @@ nav > a {
 
 .review-name {
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .review-date {
@@ -184,4 +185,8 @@ footer {
     text-align: center;
     padding: 5px;
     color: #333;
+}
+
+audio {
+    padding: 10px;
 }
