@@ -28,12 +28,12 @@
       </header>
       <nav>
         <a href="la-pizza-du-dimanche-soir.html"><div class="link-card">La Pizza du Dimanche soir</div></a>
-        <a href="#"><div class="link-card">Le Ptit Simply</div></a>
-        <a href="#"><div class="link-card">Le Grand Simply</div></a>
-        <a href="#"><div class="link-card">Le jap'</div></a>
-        <a href="#"><div class="link-card">Le Grec</div></a>
-        <a href="#"><div class="link-card">Pizza Break</div></a>
-        <a href="#"><div class="link-card">La cantoche</div></a>
+        <a href="le-ptit-auchan.html"><div class="link-card">Le Ptit Auchan</div></a>
+        <a href="le-grand-auchan.html"><div class="link-card">Le Grand Auchan</div></a>
+        <a href="le-jap.html"><div class="link-card">Le jap'</div></a>
+        <a href="le-grec.html"><div class="link-card">Le Grec</div></a>
+        <a href="pizza-break.html"><div class="link-card">Pizza Break</div></a>
+        <a href="la-cantoche.html"><div class="link-card">La cantoche</div></a>
       </nav>
       <div id="intro">
         <div id="intro-title"><i>Pause dej c’est quoi ?</i></div>
@@ -46,7 +46,10 @@
       <div id="map-text"><strong>Sélectionnez un établissement sur la carte !</strong></div>
       <div id="map"></div>
       <div class="spacer"></div>
+
+      <footer><strong>Ce site web constitue un projet pédagogique réalisé dans le cadre d'un cours de Sciences numériques et technologiques de 2nde.</strong><br> Une partie de avis affichés sur ce site provient de compte Google Buisness des établissements en question. Le contenue de ce site ainsi que les divers avis présentés n'ont en aucun cas visée diffamatoire. Pour toute réclamation, contactez Séverin FERARD severin.ferard@outlook.com</footer>
     </div>
+    
   </body>
   <script>
     var map = L.map("map").setView([48.982502, 1.973662], 12);
@@ -62,12 +65,15 @@
 
     L.marker([48.980872, 1.974287])
       .addTo(map)
-      .bindPopup("Le ptit Simply")
+      .bindPopup("Le ptit Auchan")
       .on("mouseover", function (e) {
         this.openPopup();
       })
       .on("mouseout", function (e) {
         this.closePopup();
+      })
+      .on("click", function (e) {
+        window.location = "le-ptit-auchan.html"
       });
 
       L.marker([48.980904, 1.974504])
@@ -78,6 +84,9 @@
       })
       .on("mouseout", function (e) {
         this.closePopup();
+      })
+      .on("click", function (e) {
+        window.location = "le-jap.html"
       });
 
       L.marker([48.980881, 1.974556])
@@ -88,16 +97,22 @@
       })
       .on("mouseout", function (e) {
         this.closePopup();
+      })
+      .on("click", function (e) {
+        window.location = "le-grec.html"
       });
 
       L.marker([48.986047, 1.969315])
       .addTo(map)
-      .bindPopup("Le Grand Simply")
+      .bindPopup("Le Grand Auchan")
       .on("mouseover", function (e) {
         this.openPopup();
       })
       .on("mouseout", function (e) {
         this.closePopup();
+      })
+      .on("click", function (e) {
+        window.location = "le-grand-auchan.html"
       });
 
       L.marker([48.982377, 1.969918])
@@ -108,6 +123,9 @@
       })
       .on("mouseout", function (e) {
         this.closePopup();
+      })
+      .on("click", function (e) {
+        window.location = "pizza-break.html"
       });
 
       L.marker([48.98351 ,1.973754])
@@ -118,6 +136,9 @@
       })
       .on("mouseout", function (e) {
         this.closePopup();
+      })
+      .on("click", function (e) {
+        window.location = "la-cantoche.html"
       });
 
       L.marker([48.980787571953 ,1.9743795512476936])
@@ -128,6 +149,9 @@
       })
       .on("mouseout", function (e) {
         this.closePopup();
+      })
+      .on("click", function (e) {
+        window.location = "la-pizza-du-dimache-soir.html"
       });
 
     
